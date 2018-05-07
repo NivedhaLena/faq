@@ -12,3 +12,8 @@ To run the faq project:
 9.add_column :answers, :ratings, :string, default:easy
 
 
+User Stories:
+1. As a user you can resgister or login to his account to access the questions.
+2. As a User you can use the links from laravel welcome page to navigate through hashtag links to question page.
+3. As a user you create question and answers , also can edit and delete if neccessary.
+4. As a User you can select question rating from  dropdown in the create/edit answers form to specify the difficulty level of questions.
