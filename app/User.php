@@ -57,6 +57,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Question');
     }
 
+    public function hashtag()
+    {
+        return $this->hasMany('App\hashtag');
+    }
+
     public function answers()
     {
         return $this->hasMany('App\Answer');

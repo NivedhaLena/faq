@@ -37,7 +37,8 @@
                             <div class="card">
                                 <div class="card-body">{{$answer->body}}</div>
                                 <div class="card-footer">
-
+                                    {{Form::label('rating','Question Rating :')}}
+                                    {{$answer->rating}}
                                     <a class="btn btn-primary float-right"
                                        href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
                                         View

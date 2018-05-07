@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 
 {
-    protected $fillable = ['body'];
+    protected $fillable = ['body','rating'];
 
     public function user()
     {

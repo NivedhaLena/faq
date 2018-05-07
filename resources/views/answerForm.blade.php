@@ -16,6 +16,13 @@
                         <div class="form-group">
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $answer->body, ['class' => 'form-control','required' => 'required']) !!}
+                            {{Form::label('rating','Question Rating :')}}
+                            <select name="rating" class="form control">
+                                <option value="easy">easy</option>
+                                <option value="normal">normal</option>
+                                <option value="dificult">difficult</option>
+                                <option value="challenging">challenging</option>
+                            </select>
                         </div>
                         <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
                         </button>

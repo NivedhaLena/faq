@@ -42,10 +42,12 @@ class AnswerController extends Controller
 
         $input = $request->validate([
             'body' => 'required|min:5',
+            'rating' => 'required'
         ], [
 
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
+            'rating.required' => 'rating is required',
 
         ]);
         $input = request()->all();
@@ -96,15 +98,18 @@ class AnswerController extends Controller
     {
         $input = $request->validate([
             'body' => 'required|min:5',
+            'rating'=> 'required'
         ], [
 
             'body.required' => 'Body is required',
             'body.min' => 'Body must be at least 5 characters',
+            'rating.required' => 'rating is required',
 
         ]);
 
         $answer = Answer::find($answer);
         $answer->body = $request->body;
+        $answer->rating =$request->rating;
         $answer->save();
 
         return redirect()->route('answers.show',['question_id' => $question, 'answer_id' => $answer])->with('message', 'Updated');
