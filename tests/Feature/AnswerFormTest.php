@@ -15,7 +15,7 @@ class AnswerFormTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/login');
-        $response -> assertStatus(200);
+        $response = $this->get('/questions/{question_id}/answers/create');
+        $response -> assertStatus(302);
     }
 }
