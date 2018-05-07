@@ -9,4 +9,6 @@ To run the faq project:
 6.Run: php artisan migrate
 7.Run: unit tests: phpunit
 8.Run: seeds php artisan migrate:refresh --seed
+9.add_column :answers, :ratings, :string, default:easy
+
 
